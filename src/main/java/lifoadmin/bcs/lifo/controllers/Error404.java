@@ -9,7 +9,7 @@ import static lifoadmin.bcs.lifo.constants.Constants.ADMIN;
 @Controller
 public class Error404 {
 
-    @RequestMapping("/" + ADMIN + "/Error404")
+    @RequestMapping("/Error404")
     public String getPage(){
         return "Error404";
 

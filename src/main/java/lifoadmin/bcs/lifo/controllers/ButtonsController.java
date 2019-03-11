@@ -9,7 +9,7 @@ import static lifoadmin.bcs.lifo.constants.Constants.ADMIN;
 @Controller
 public class ButtonsController {
 
-    @RequestMapping("/" + ADMIN + "/buttons")
+    @RequestMapping("/buttons")
     public String getPage(){
         return "buttons";
 

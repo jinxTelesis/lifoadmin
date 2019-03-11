@@ -9,7 +9,7 @@ import static lifoadmin.bcs.lifo.constants.Constants.ADMIN;
 @Controller
 public class UtilitiesColor {
 
-    @RequestMapping("/" + ADMIN + "/utilities-color")
+    @RequestMapping("/utilities-color")
     public String getPage(){
         return "utilities-color";
 

@@ -9,7 +9,7 @@ import static lifoadmin.bcs.lifo.constants.Constants.ADMIN;
 @Controller
 public class UntilitiesAnimationController {
 
-    @RequestMapping("/" + ADMIN + "/utilities-animation")
+    @RequestMapping("/utilities-animation")
     public String getPage(){
         return  "utilities-animation";
 

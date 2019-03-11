@@ -59,6 +59,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web-services</artifactId>
+        </dependency>
         <!--
         <dependency>
             <groupId>org.springframework.session</groupId>
@@ -81,11 +85,14 @@
             <artifactId>mysql-connector-java</artifactId>
             <scope>runtime</scope>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-configuration-processor</artifactId>
-            <optional>true</optional>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>5.1.4.RELEASE</version>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -98,7 +105,11 @@
             <scope>test</scope>
         </dependency>
         -->
+
     </dependencies>
+
+
+
 
     <build>
         <plugins>
@@ -106,6 +117,37 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.2.2</version>
+
+                <configuration>
+                    <webResources>
+                        <resource>
+                            <directory>src/main/templates/css</directory>
+                            <includes>
+                                <includes>**/*.css</includes>
+                            </includes>
+                        </resource>
+                        <resource>
+                            <directory>src/main/templates/images</directory>
+                            <includes>
+                                <includes>**/*.png</includes>
+                            </includes>
+                            <includes>
+                                <includes>**/*.jpg</includes>
+                            </includes>
+                            <includes>
+                                <includes>**/*.gif</includes>
+                            </includes>
+                        </resource>
+                    </webResources>
+                </configuration>
+            </plugin>
+
         </plugins>
     </build>
 

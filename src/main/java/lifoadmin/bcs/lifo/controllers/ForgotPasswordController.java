@@ -9,7 +9,7 @@ import static lifoadmin.bcs.lifo.constants.Constants.ADMIN;
 @Controller
 public class ForgotPasswordController {
 
-    @RequestMapping("/" + ADMIN + "/forgot-password")
+    @RequestMapping("/forgot-password")
     public String getPage(){
         return "forgot-password";
 
